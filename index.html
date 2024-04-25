@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-  <script defer src="main.js"></script></head>
+  <script defer src="bundle.js"></script></head>
   <body>
     <div class="weather-info">
       <div class="weather-text">
         <div class="text"></div>
       </div>
       <div class="weather-city"></div>
-      <div class="weather-temp"></div>
+      <div class="weather-temp">
+        <div class="c"></div>
+        <div class="f"></div>
+      </div>
 
       <div class="weather-date"></div>
     </div>
@@ -22,7 +25,9 @@
         placeholder="Search Location..."
         autocomplete="off"
       />
-      <button class="search"></button>
+      <button class="search">
+        <img class="searchImg" src="./assets/search.png" alt="Search Icon" />
+      </button>
     </div>
   </body>
 </html>
