@@ -1,8 +1,8 @@
 import "../styles.css";
-import getData from "./data.js";
+import getData from "./data";
 import "../assets/weather.jpg";
 import searchImg from "../assets/search.png";
-import displayData from "./dom.js";
+import displayData from "./dom";
 
 const autocompleteList = document.getElementById("autocomplete-list");
 const search = document.querySelector(".search");
@@ -17,7 +17,6 @@ async function searchLocation(value) {
   displayData(weatherData);
 }
 
-
 function displayAutocomplete(data) {
   autocompleteList.innerHTML = "";
   data.forEach((location) => {
@@ -26,7 +25,7 @@ function displayAutocomplete(data) {
     li.addEventListener("click", () => {
       input.value = location.name;
       autocompleteList.innerHTML = "";
-      searchLocation(input.value)
+      searchLocation(input.value);
     });
     autocompleteList.appendChild(li);
   });
@@ -48,8 +47,6 @@ input.addEventListener("input", async function () {
     console.error("Error fetching autocomplete data:", error);
   }
 });
-
-
 
 search.addEventListener("click", () => {
   searchLocation(input.value);
