@@ -45,7 +45,6 @@ input::placeholder {
   height: 33px;
   max-width: 600px;
   border-bottom: 2px solid var(--color);
-  margin-bottom: 300px;
 }
 button {
   cursor: pointer;
@@ -81,4 +80,19 @@ button {
 }
 .weather-city {
   font-size: 35px;
+}
+
+ul {
+  height: 300px;
+  color: var(--color);
+  list-style: none;
+  font-size: 20px;
+  width: 200px;
+}
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
 }
