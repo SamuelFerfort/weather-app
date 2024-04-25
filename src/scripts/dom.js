@@ -60,3 +60,5 @@ export default function displayData(data) {
   textDiv.appendChild(text);
   textDiv.appendChild(img);
 }
+
+

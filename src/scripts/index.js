@@ -11,6 +11,13 @@ const searchPng = document.querySelector(".searchImg");
 
 searchPng.src = searchImg;
 
+async function searchLocation(value) {
+  if (!value) return;
+  const weatherData = await getData(value);
+  displayData(weatherData);
+}
+
+
 function displayAutocomplete(data) {
   autocompleteList.innerHTML = "";
   data.forEach((location) => {
@@ -19,7 +26,7 @@ function displayAutocomplete(data) {
     li.addEventListener("click", () => {
       input.value = location.name;
       autocompleteList.innerHTML = "";
-      searchLocation(input.value);
+      searchLocation(input.value)
     });
     autocompleteList.appendChild(li);
   });
@@ -42,11 +49,7 @@ input.addEventListener("input", async function () {
   }
 });
 
-async function searchLocation(value) {
-  if (!value) return;
-  const weatherData = await getData(value);
-  displayData(weatherData);
-}
+
 
 search.addEventListener("click", () => {
   searchLocation(input.value);
