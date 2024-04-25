@@ -7,7 +7,7 @@ export default async function getWeather(city) {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
-
+    
     const allData = await response.json();
     const data = {
       city: allData.location.name,

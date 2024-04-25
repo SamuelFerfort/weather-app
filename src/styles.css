@@ -25,7 +25,7 @@ body {
 }
 
 input {
-  max-width: 550px;
+  width: 200px;
   background: none;
   color: var(--color);
   font-size: 20px;
@@ -80,5 +80,5 @@ button {
   gap: 30px;
 }
 .weather-city {
-  font-size: 40px;
+  font-size: 35px;
 }
