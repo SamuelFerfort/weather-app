@@ -7,14 +7,21 @@
   <script defer src="main.js"></script></head>
   <body>
     <div class="weather-info">
-      <div class="weather-text"></div>
-      <div class="weather-country"></div>
+      <div class="weather-text">
+        <div class="text"></div>
+      </div>
+      <div class="weather-city"></div>
       <div class="weather-temp"></div>
-      <div class="weather-icon"></div>
+
       <div class="weather-date"></div>
     </div>
     <div class="search-box">
-      <input type="text" id="city" placeholder="Search Location..." />
+      <input
+        type="text"
+        id="city"
+        placeholder="Search Location..."
+        autocomplete="off"
+      />
       <button class="search"></button>
     </div>
   </body>
