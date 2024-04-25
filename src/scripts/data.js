@@ -10,11 +10,13 @@ export default async function getWeather(city) {
 
     const allData = await response.json();
     const data = {
-      name: allData.location.name,
+      city: allData.location.name,
       country: allData.location.country,
       temp_c: allData.current.temp_c,
       temp_f: allData.current.temp_f,
       condition: allData.current.condition.text,
+      icon: allData.current.condition.icon,
+      date: allData.location.localtime,
     };
     return data;
   } catch (error) {
