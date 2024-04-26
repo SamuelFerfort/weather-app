@@ -21,7 +21,9 @@ function displayAutocomplete(data) {
   autocompleteList.innerHTML = "";
   data.forEach((location) => {
     const li = document.createElement("li");
-    li.textContent = location.name;
+
+    li.innerHTML = `${location.name}<span>${location.country}</span`;
+
     li.addEventListener("click", () => {
       input.value = location.name;
       autocompleteList.innerHTML = "";
