@@ -21,13 +21,12 @@ function displayAutocomplete(data) {
   autocompleteList.innerHTML = "";
   data.forEach((location) => {
     const li = document.createElement("li");
-
     li.innerHTML = `${location.name}<span>${location.country}</span`;
 
     li.addEventListener("click", () => {
       input.value = location.name;
       autocompleteList.innerHTML = "";
-      searchLocation(input.value);
+      searchLocation(`id:${location.id}`);
     });
     autocompleteList.appendChild(li);
   });
