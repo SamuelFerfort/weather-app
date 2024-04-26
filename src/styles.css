@@ -25,7 +25,7 @@ body {
 }
 
 input {
-  width: 200px;
+  width: 90%;
   background: none;
   color: var(--color);
   font-size: 20px;
@@ -39,17 +39,26 @@ input {
 input::placeholder {
   color: rgba(245, 245, 245, 0.7);
 }
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20fill%3D%22none%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M1%2011L11%201%22%2F%3E%3Cpath%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M1%201L11%2011%22%2F%3E%3C%2Fsvg%3E");
+  background-position: center;
+  cursor: pointer;
+}
+
 .search-box {
   display: flex;
   align-items: center;
   height: 33px;
-  max-width: 600px;
+  max-width: 900px;
   border-bottom: 2px solid var(--color);
 }
 button {
   cursor: pointer;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   background: none;
   border: none;
 }

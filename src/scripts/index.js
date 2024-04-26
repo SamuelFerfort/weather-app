@@ -24,7 +24,7 @@ function displayAutocomplete(data) {
     li.innerHTML = `${location.name}<span>${location.country}</span`;
 
     li.addEventListener("click", () => {
-      input.value = location.name;
+      input.value = `${location.name}, ${location.country}`;
       autocompleteList.innerHTML = "";
       searchLocation(`id:${location.id}`);
     });
